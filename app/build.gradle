@@ -2,14 +2,18 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    buildToolsVersion "23.0.2"
     defaultConfig {
         applicationId "com.lemonade.stand.right"
         minSdkVersion 21
         targetSdkVersion 23
         versionCode 1
-        versionName "1.0"
+        versionName "1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    dexOptions {
+        preDexLibraries = false //delete the already predexed libraries
     }
     buildTypes {
         release {
@@ -17,15 +21,26 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    productFlavors{
+    }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:23.4.0'
     compile 'com.android.support:design:23.4.0'
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:recyclerview-v7:25.0.1'
+    compile 'com.android.support:recyclerview-v7:23.0.1'
+    compile project(':richeditor')
+    compile 'com.google.android.gms:play-services:9.4.0'
+    compile 'com.afollestad.material-dialogs:core:0.9.0.1'
+    compile 'com.github.johnpersano:supertoasts:2.0'
+    compile 'org.jsoup:jsoup:1.9.1'
+    compile files('libs/aspose-words-1.12-android-jdk16.jar')
+    //compile files('/../libs/aspose-words-1.12-android-jdk16.jar')
+    //provided files('/../libs/classes-dex2jar.jar')
+    //compile 'jp.wasabeef:richeditor-android:1.2.0'
 }
