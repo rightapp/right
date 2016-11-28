@@ -1,7 +1,9 @@
 # RIGHT
 
 A text editing/formatting app that will make life easier for people who use their phone to write.
+
 [Visit our website!](https://rightapp.github.io/)
+
 *STILL UNDER DEVELOPMENT*
 
 ### Platform
