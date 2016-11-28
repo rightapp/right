@@ -1,7 +1,7 @@
 # RIGHT
 
 A text editing/formatting app that will make life easier for people who use their phone to write.
-
+[Visit our website!](https://rightapp.github.io/)
 *STILL UNDER DEVELOPMENT*
 
 ### Platform
@@ -25,7 +25,7 @@ Other notable features:
 * [**Ong Yan Chun**](https://github.com/Nyanch)
 * [**Navneeth Kanagavelu**](https://github.com/knav)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/rightapp/right/contributors) who participated in this project.
 
 ## License
 
